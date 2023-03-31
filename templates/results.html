@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VirusTotal Results</title>
+</head>
+<body>
+	<h1>VirusTotal Results</h1>
+	{% if response.response_code == 1 %}
+		<p>The file is malicious. Detection ratio: {{ response.positives }}/{{ response.total }}</p>
+		<p>Scan results:</p>
+		<ul>
+			{% for scanner, result in response.scans.items() %}
+				<li>{{ scanner }}: {{ result.result }}</li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>The file is clean.</p>
+	{% endif %}
+	<p><a href="{{ url_for('home') }}">Upload another file</a></p>
+</body>
+</html>

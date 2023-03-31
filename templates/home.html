@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload a File</title>
+</head>
+<body>
+	<h1>Upload a File to VirusTotal</h1>
+	<form method="post" enctype="multipart/form-data" action="{{ url_for('results') }}">
+		<label for="file">Select a file:</label>
+		<input type="file" name="file" id="file"><br><br>
+		<input type="submit" value="Upload">
+	</form>
+</body>
+</html>
