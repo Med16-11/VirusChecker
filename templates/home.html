@@ -1,14 +1,121 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Upload a File</title>
+	<title>VirusTotal File Upload</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f7f7f7;
+			margin: 0;
+			padding: 0;
+		}
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 30px;
+		background-color: #fff;
+		border-radius: 10px;
+		box-shadow: 0px 2px 20px rgba(0,0,0,0.1);
+	}
+
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 40px;
+	}
+
+	.logo {
+		font-size: 24px;
+		font-weight: bold;
+		color: #333;
+		text-decoration: none;
+	}
+
+	.navbar {
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		font-weight: bold;
+		color: #333;
+		text-decoration: none;
+	}
+
+	.navbar a {
+		padding: 10px;
+		margin-right: 20px;
+		color: #333;
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	.navbar a:hover {
+		color: #555;
+	}
+
+	h1 {
+		text-align: center;
+		margin-bottom: 40px;
+		color: #333;
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	label {
+		font-weight: bold;
+		margin-bottom: 10px;
+		color: #333;
+	}
+
+	input[type="file"] {
+		padding: 10px;
+		border-radius: 5px;
+		border: 2px solid #ddd;
+		background-color: #fff;
+		font-size: 16px;
+		color: #333;
+		cursor: pointer;
+		width: 100%;
+		max-width: 400px;
+		margin-bottom: 20px;
+	}
+
+	input[type="submit"] {
+		padding: 10px;
+		border-radius: 5px;
+		border: none;
+		background-color: #333;
+		font-size: 16px;
+		color: #fff;
+		cursor: pointer;
+		width: 100%;
+		max-width: 400px;
+	}
+
+	input[type="submit"]:hover {
+		background-color: #555;
+	}
+</style>
 </head>
 <body>
-	<h1>Upload a File to VirusTotal</h1>
-	<form method="post" enctype="multipart/form-data" action="{{ url_for('results') }}">
-		<label for="file">Select a file:</label>
-		<input type="file" name="file" id="file"><br><br>
-		<input type="submit" value="Upload">
-	</form>
+	<header>
+		<a href="#" class="logo">VirusTotal File Upload</a>
+		<nav class="navbar">
+			<a href="#">About Us</a>
+			<a href="#">Contact Us</a>
+		</nav>
+	</header>
+	<div class="container">
+		<h1>Scan Your Files with VirusTotal</h1>
+		<form method="post" enctype="multipart/form-data" action="{{ url_for('results') }}">
+			<label for="file">Select a file:</label>
+			<input type="file" name="file" id="file"><br><br>
+			<input type="submit" value="Upload">
+		</form>
+	</div>
 </body>
 </html>
