@@ -17,7 +17,7 @@ if(n == 1 or n > 2):
 	print("[-]Invalid Syntax")
 	print("Syntax : ./virus_total.py <file_name>")
 else:
-	api_key = "<your_api_key_here>"
+	api_key = "ea2755cf0e5080ed3c674a1dd2d8b8ccc2703777ec4b410eb603a01b0bad3388"
 	content = file_input(sys.argv[1])
 	md5_sum = hashlib.md5()
 	md5_sum.update(content)

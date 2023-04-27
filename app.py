@@ -13,7 +13,7 @@ def home():
 @app.route('/results', methods=['POST'])
 def results():
     file = request.files['file']
-    api_key = "<your_api_key_here>"
+    api_key = "ea2755cf0e5080ed3c674a1dd2d8b8ccc2703777ec4b410eb603a01b0bad3388"
     content = file.read()
     md5_sum = hashlib.md5()
     md5_sum.update(content)
