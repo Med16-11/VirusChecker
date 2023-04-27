@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import sys
 import hashlib
 import json
-from virus_total_apis import PublicApi as public_api
+# from virus_total_apis import PublicApi as public_api
 
 app = Flask(__name__)
 
